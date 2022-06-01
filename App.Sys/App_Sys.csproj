@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BDFA441-8A01-4BFA-B6BC-953795FFB7C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App_Sys</RootNamespace>
+    <AssemblyName>App_Sys</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.35, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DSkin">
+      <HintPath>..\packages\DSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advice\FormAdviceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advice\FormAdviceEdit.Designer.cs">
+      <DependentUpon>FormAdviceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advice\FormAdviceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advice\FormAdviceManager.Designer.cs">
+      <DependentUpon>FormAdviceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advice\FormExaminationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advice\FormExaminationManager.Designer.cs">
+      <DependentUpon>FormExaminationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advice\FormInspectionManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advice\FormInspectionManager.Designer.cs">
+      <DependentUpon>FormInspectionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dept\DeptManagerHelper.cs" />
+    <Compile Include="Dept\FormDeptEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dept\FormDeptEdit.Designer.cs">
+      <DependentUpon>FormDeptEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dept\FormDeptManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dept\FormDeptManager.Designer.cs">
+      <DependentUpon>FormDeptManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dept\FormDeptPharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dept\FormDeptPharmacy.Designer.cs">
+      <DependentUpon>FormDeptPharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\CategoryManagerHelper.cs" />
+    <Compile Include="Dic\FormAdviceCategoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormAdviceCategoryEdit.Designer.cs">
+      <DependentUpon>FormAdviceCategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\FormAdviceCategoryMapper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormAdviceCategoryMapper.Designer.cs">
+      <DependentUpon>FormAdviceCategoryMapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\FormDicDetailEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormDicDetailEdit.Designer.cs">
+      <DependentUpon>FormDicDetailEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\FormDicEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormDicEdit.Designer.cs">
+      <DependentUpon>FormDicEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\FormDicAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormDicAdd.Designer.cs">
+      <DependentUpon>FormDicAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\FormDicManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormDicManager.Designer.cs">
+      <DependentUpon>FormDicManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\FormDosageformUsageMapper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormDosageformUsageMapper.Designer.cs">
+      <DependentUpon>FormDosageformUsageMapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\FormUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormUsage.Designer.cs">
+      <DependentUpon>FormUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\FormUsageEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dic\FormUsageEdit.Designer.cs">
+      <DependentUpon>FormUsageEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dic\UCDicCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dic\UCDicCatalog.Designer.cs">
+      <DependentUpon>UCDicCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\ClassAndSpecification\FormClassAndSpecificationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\ClassAndSpecification\FormClassAndSpecificationManager.Designer.cs">
+      <DependentUpon>FormClassAndSpecificationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\ClassAndSpecification\FormDrugClassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\ClassAndSpecification\FormDrugClassEdit.Designer.cs">
+      <DependentUpon>FormDrugClassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\ClassAndSpecification\FormSpecificationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\ClassAndSpecification\FormSpecificationEdit.Designer.cs">
+      <DependentUpon>FormSpecificationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ChangeInventory\FormAddChangeInventoryReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ChangeInventory\FormAddChangeInventoryReceipt.Designer.cs">
+      <DependentUpon>FormAddChangeInventoryReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ChangeInventory\FormAddTransferReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ChangeInventory\FormAddTransferReceipt.Designer.cs">
+      <DependentUpon>FormAddTransferReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ChangeInventory\UCChangeInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ChangeInventory\UCChangeInventory.Designer.cs">
+      <DependentUpon>UCChangeInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ChangeInventory\FormDrugTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ChangeInventory\FormDrugTransfer.Designer.cs">
+      <DependentUpon>FormDrugTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ApplyAudit\FormDrugApplyAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\ApplyAudit\FormDrugApplyAudit.Designer.cs">
+      <DependentUpon>FormDrugApplyAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\FormDrugInventoryManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\FormDrugInventoryManage.Designer.cs">
+      <DependentUpon>FormDrugInventoryManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\InInventory\FormAddPharmacyInInventoryReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\InInventory\FormAddPharmacyInInventoryReceipt.Designer.cs">
+      <DependentUpon>FormAddPharmacyInInventoryReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\InInventory\FormAddWarehouseInInventoryReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\InInventory\FormAddWarehouseInInventoryReceipt.Designer.cs">
+      <DependentUpon>FormAddWarehouseInInventoryReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\OutInventory\FormAddPharmacyOutInventoryReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\OutInventory\FormAddPharmacyOutInventoryReceipt.Designer.cs">
+      <DependentUpon>FormAddPharmacyOutInventoryReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\IUCInit.cs" />
+    <Compile Include="Drug\InventoryManage\InInventory\UCPharmacyInInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\InInventory\UCPharmacyInInventory.Designer.cs">
+      <DependentUpon>UCPharmacyInInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\InInventory\UCWarehouseInInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\InInventory\UCWarehouseInInventory.Designer.cs">
+      <DependentUpon>UCWarehouseInInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\OutInventory\UCPharmacyOutInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\OutInventory\UCPharmacyOutInventory.Designer.cs">
+      <DependentUpon>UCPharmacyOutInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\OutInventory\UCWarehouseOutInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\InventoryManage\OutInventory\UCWarehouseOutInventory.Designer.cs">
+      <DependentUpon>UCWarehouseOutInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\MerchantsManager\FormMerchantsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\MerchantsManager\FormMerchantsEdit.Designer.cs">
+      <DependentUpon>FormMerchantsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\MerchantsManager\FromManufacturerManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\MerchantsManager\FromManufacturerManager.Designer.cs">
+      <DependentUpon>FromManufacturerManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\MerchantsManager\FromSupplierManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\MerchantsManager\FromSupplierManager.Designer.cs">
+      <DependentUpon>FromSupplierManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\PriceChangedReceipt\FormAddPriceChangedReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\PriceChangedReceipt\FormAddPriceChangedReceipt.Designer.cs">
+      <DependentUpon>FormAddPriceChangedReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\PriceChangedReceipt\FormPriceChangedReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\PriceChangedReceipt\FormPriceChangedReceipt.Designer.cs">
+      <DependentUpon>FormPriceChangedReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\PriceChangedReceipt\UCPriceChangedReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\PriceChangedReceipt\UCPriceChangedReceipt.Designer.cs">
+      <DependentUpon>UCPriceChangedReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\ProcurementPlan\FormProcurementPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\ProcurementPlan\FormProcurementPlan.Designer.cs">
+      <DependentUpon>FormProcurementPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\SplitOrMergeManager\FormSplitOrMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\SplitOrMergeManager\FormSplitOrMerge.Designer.cs">
+      <DependentUpon>FormSplitOrMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\SplitOrMergeManager\UCBaseSplitOrMerge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\SplitOrMergeManager\UCBaseSplitOrMerge.Designer.cs">
+      <DependentUpon>UCBaseSplitOrMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\SplitOrMergeManager\UCMerge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\SplitOrMergeManager\UCMerge.Designer.cs">
+      <DependentUpon>UCMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\SplitOrMergeManager\UCSplit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Drug\SplitOrMergeManager\UCSplit.Designer.cs">
+      <DependentUpon>UCSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\TakeStockManager\FormTakeStockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\TakeStockManager\FormTakeStockDetails.Designer.cs">
+      <DependentUpon>FormTakeStockDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\TakeStockManager\FromWTakeStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\TakeStockManager\FromWTakeStock.Designer.cs">
+      <DependentUpon>FromWTakeStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeItem\FormFeeItemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeeItem\FormFeeItemEdit.Designer.cs">
+      <DependentUpon>FormFeeItemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeItem\FormFeeItemAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeeItem\FormFeeItemAdd.Designer.cs">
+      <DependentUpon>FormFeeItemAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeItem\FormFeeItemManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeeItem\FormFeeItemManager.Designer.cs">
+      <DependentUpon>FormFeeItemManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeType\FormFeeTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeeType\FormFeeTypeEdit.Designer.cs">
+      <DependentUpon>FormFeeTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeType\FormFeeTypeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeeType\FormFeeTypeAdd.Designer.cs">
+      <DependentUpon>FormFeeTypeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeeType\FormFeeTypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeeType\FormFeeTypeManager.Designer.cs">
+      <DependentUpon>FormFeeTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaseSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaseSet.Designer.cs">
+      <DependentUpon>FormBaseSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaseSysDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaseSysDialog.Designer.cs">
+      <DependentUpon>FormBaseSysDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FormParameterEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FormParameterEdit.Designer.cs">
+      <DependentUpon>FormParameterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\FormParameterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\FormParameterManager.Designer.cs">
+      <DependentUpon>FormParameterManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialNumber\FormSerialNumberEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialNumber\FormSerialNumberEdit.Designer.cs">
+      <DependentUpon>FormSerialNumberEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialNumber\FormSerialNumberManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialNumber\FormSerialNumberManager.Designer.cs">
+      <DependentUpon>FormSerialNumberManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FormUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FormUserEdit.Designer.cs">
+      <DependentUpon>FormUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FormUserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FormUserManager.Designer.cs">
+      <DependentUpon>FormUserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormMenuEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormMenuEdit.Designer.cs">
+      <DependentUpon>FormMenuEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormMenuManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormMenuManager.Designer.cs">
+      <DependentUpon>FormMenuManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormSystemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormSystemEdit.Designer.cs">
+      <DependentUpon>FormSystemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\FormDLLBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\FormDLLBrowser.designer.cs">
+      <DependentUpon>FormDLLBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Role\FormAddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\FormAddRole.Designer.cs">
+      <DependentUpon>FormAddRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Role\FormRoleManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\FormRoleManager.Designer.cs">
+      <DependentUpon>FormRoleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\IUserRoleInfo.cs" />
+    <Compile Include="User\UCUserRoleInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UCUserRoleInfo.Designer.cs">
+      <DependentUpon>UCUserRoleInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HIS.ControlLib\HIS.ControlLib.csproj">
+      <Project>{5449eded-32ba-417c-916b-c88bef58712c}</Project>
+      <Name>HIS.ControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Core\HIS.Core.csproj">
+      <Project>{c998f840-a29e-421c-b3bc-2d8da28dc226}</Project>
+      <Name>HIS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.DSkinControl\HIS.DSkinControl.csproj">
+      <Project>{cefb86f7-ec2d-4080-a0d5-af3db7b987b7}</Project>
+      <Name>HIS.DSkinControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Service.Core\HIS.Service.Core.csproj">
+      <Project>{bf6f3ed7-32b1-4100-b026-f26aefe657a0}</Project>
+      <Name>HIS.Service.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Utility\HIS.Utility.csproj">
+      <Project>{2c8a0d17-e431-4f4b-b1ca-64b18d75bf72}</Project>
+      <Name>HIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Advice\FormAdviceEdit.resx">
+      <DependentUpon>FormAdviceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advice\FormAdviceManager.resx">
+      <DependentUpon>FormAdviceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advice\FormExaminationManager.resx">
+      <DependentUpon>FormExaminationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advice\FormInspectionManager.resx">
+      <DependentUpon>FormInspectionManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dept\FormDeptEdit.resx">
+      <DependentUpon>FormDeptEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dept\FormDeptManager.resx">
+      <DependentUpon>FormDeptManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dept\FormDeptPharmacy.resx">
+      <DependentUpon>FormDeptPharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormAdviceCategoryEdit.resx">
+      <DependentUpon>FormAdviceCategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormAdviceCategoryMapper.resx">
+      <DependentUpon>FormAdviceCategoryMapper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormDicDetailEdit.resx">
+      <DependentUpon>FormDicDetailEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormDicEdit.resx">
+      <DependentUpon>FormDicEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormDicAdd.resx">
+      <DependentUpon>FormDicAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormDicManager.resx">
+      <DependentUpon>FormDicManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormDosageformUsageMapper.resx">
+      <DependentUpon>FormDosageformUsageMapper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormUsage.resx">
+      <DependentUpon>FormUsage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\FormUsageEdit.resx">
+      <DependentUpon>FormUsageEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dic\UCDicCatalog.resx">
+      <DependentUpon>UCDicCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\ClassAndSpecification\FormClassAndSpecificationManager.resx">
+      <DependentUpon>FormClassAndSpecificationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\ClassAndSpecification\FormDrugClassEdit.resx">
+      <DependentUpon>FormDrugClassEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\ClassAndSpecification\FormSpecificationEdit.resx">
+      <DependentUpon>FormSpecificationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\ChangeInventory\FormAddChangeInventoryReceipt.resx">
+      <DependentUpon>FormAddChangeInventoryReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\ChangeInventory\FormAddTransferReceipt.resx">
+      <DependentUpon>FormAddTransferReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\ChangeInventory\UCChangeInventory.resx">
+      <DependentUpon>UCChangeInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\ChangeInventory\FormDrugTransfer.resx">
+      <DependentUpon>FormDrugTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\ApplyAudit\FormDrugApplyAudit.resx">
+      <DependentUpon>FormDrugApplyAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\FormDrugInventoryManage.resx">
+      <DependentUpon>FormDrugInventoryManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\InInventory\FormAddPharmacyInInventoryReceipt.resx">
+      <DependentUpon>FormAddPharmacyInInventoryReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\InInventory\FormAddWarehouseInInventoryReceipt.resx">
+      <DependentUpon>FormAddWarehouseInInventoryReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\InInventory\UCPharmacyInInventory.resx">
+      <DependentUpon>UCPharmacyInInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\InInventory\UCWarehouseInInventory.resx">
+      <DependentUpon>UCWarehouseInInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\OutInventory\FormAddPharmacyOutInventoryReceipt.resx">
+      <DependentUpon>FormAddPharmacyOutInventoryReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\OutInventory\UCPharmacyOutInventory.resx">
+      <DependentUpon>UCPharmacyOutInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\InventoryManage\OutInventory\UCWarehouseOutInventory.resx">
+      <DependentUpon>UCWarehouseOutInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\MerchantsManager\FormMerchantsEdit.resx">
+      <DependentUpon>FormMerchantsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\MerchantsManager\FromManufacturerManager.resx">
+      <DependentUpon>FromManufacturerManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\MerchantsManager\FromSupplierManager.resx">
+      <DependentUpon>FromSupplierManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\PriceChangedReceipt\FormAddPriceChangedReceipt.resx">
+      <DependentUpon>FormAddPriceChangedReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\PriceChangedReceipt\FormPriceChangedReceipt.resx">
+      <DependentUpon>FormPriceChangedReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\PriceChangedReceipt\UCPriceChangedReceipt.resx">
+      <DependentUpon>UCPriceChangedReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\ProcurementPlan\FormProcurementPlan.resx">
+      <DependentUpon>FormProcurementPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\SplitOrMergeManager\FormSplitOrMerge.resx">
+      <DependentUpon>FormSplitOrMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\SplitOrMergeManager\UCMerge.resx">
+      <DependentUpon>UCMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\SplitOrMergeManager\UCSplit.resx">
+      <DependentUpon>UCSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\TakeStockManager\FormTakeStockDetails.resx">
+      <DependentUpon>FormTakeStockDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drug\TakeStockManager\FromWTakeStock.resx">
+      <DependentUpon>FromWTakeStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeItem\FormFeeItemEdit.resx">
+      <DependentUpon>FormFeeItemEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeItem\FormFeeItemAdd.resx">
+      <DependentUpon>FormFeeItemAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeItem\FormFeeItemManager.resx">
+      <DependentUpon>FormFeeItemManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeType\FormFeeTypeEdit.resx">
+      <DependentUpon>FormFeeTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeType\FormFeeTypeAdd.resx">
+      <DependentUpon>FormFeeTypeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeeType\FormFeeTypeManager.resx">
+      <DependentUpon>FormFeeTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaseSet.resx">
+      <DependentUpon>FormBaseSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaseSysDialog.resx">
+      <DependentUpon>FormBaseSysDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FormParameterEdit.resx">
+      <DependentUpon>FormParameterEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\FormParameterManager.resx">
+      <DependentUpon>FormParameterManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerialNumber\FormSerialNumberEdit.resx">
+      <DependentUpon>FormSerialNumberEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerialNumber\FormSerialNumberManager.resx">
+      <DependentUpon>FormSerialNumberManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FormUserEdit.resx">
+      <DependentUpon>FormUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FormUserManager.resx">
+      <DependentUpon>FormUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormMenuEdit.resx">
+      <DependentUpon>FormMenuEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormMenuManager.resx">
+      <DependentUpon>FormMenuManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormSystemEdit.resx">
+      <DependentUpon>FormSystemEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\FormDLLBrowser.resx">
+      <DependentUpon>FormDLLBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Role\FormAddRole.resx">
+      <DependentUpon>FormAddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Role\FormRoleManager.resx">
+      <DependentUpon>FormRoleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UCUserRoleInfo.resx">
+      <DependentUpon>UCUserRoleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\Cards_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignVerticalLeft2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\WebApiClient.JIT.1.1.4\analyzers\dotnet\cs\WebApiClient.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

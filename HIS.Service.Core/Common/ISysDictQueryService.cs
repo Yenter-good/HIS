@@ -1,0 +1,109 @@
+﻿using HIS.Service.Core.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HIS.Service.Core
+{
+    public interface ISysDictQueryService : IServiceSingleton
+    {
+        /// <summary>
+        /// 获取科室分类
+        /// </summary>
+        /// <param name="includeDisable">是否包含禁用</param>
+        /// <returns></returns>
+        List<ItemEntity> GetDeptCategories(bool includeDisable = false);
+        /// <summary>
+        /// 获取教育水平
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetEducation();
+        /// <summary>
+        /// 获取设备类型
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetModality();
+        /// <summary>
+        /// 获取部位
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetPart();
+        /// <summary>
+        /// 获取试管类型
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetBuret();
+        /// <summary>
+        /// 获取标本类型
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetSample();
+        /// <summary>
+        /// 获取药品属性
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetDrugProperty();
+        /// <summary>
+        /// 获取药品剂型
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetDrugform();
+        /// <summary>
+        /// 获取定价类型
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetPriceType();
+        /// <summary>
+        /// 获取药理分类
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetPharmacologyType();
+        /// <summary>
+        /// 获取发药方式
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetDispensingType();
+        /// <summary>
+        /// 获取药品调价原因
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetPiceChangeMemoType();
+        /// <summary>
+        /// 获取职业
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetProfessionalType();
+        /// <summary>
+        /// 获取民族
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetNational();
+        /// <summary>
+        /// 获取挂号类别（专家、普通、急诊）
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetRegCategory();
+        /// <summary>
+        /// 获取血型
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetBlood();
+        /// <summary>
+        /// 获取婚姻状况
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetMarry();
+        /// <summary>
+        /// 获取国籍
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetNationality();
+        /// <summary>
+        /// 获取门诊模板节点
+        /// </summary>
+        /// <returns></returns>
+        List<LongItem> GetOPTemplateNode();
+    }
+}

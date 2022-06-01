@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA64F3C7-5BF5-4080-A208-DB6EB044FCE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App_ChargeSystem</RootNamespace>
+    <AssemblyName>App_ChargeSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Empi\FormPatientManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empi\FormPatientManager.Designer.cs">
+      <DependentUpon>FormPatientManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceManager\FormInvoiceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceManager\FormInvoiceManager.Designer.cs">
+      <DependentUpon>FormInvoiceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scheduling\FormRegisteredFeeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scheduling\FormRegisteredFeeType.Designer.cs">
+      <DependentUpon>FormRegisteredFeeType.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HIS.ControlLib\HIS.ControlLib.csproj">
+      <Project>{5449eded-32ba-417c-916b-c88bef58712c}</Project>
+      <Name>HIS.ControlLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Core\HIS.Core.csproj">
+      <Project>{c998f840-a29e-421c-b3bc-2d8da28dc226}</Project>
+      <Name>HIS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.DSkinControl\HIS.DSkinControl.csproj">
+      <Project>{cefb86f7-ec2d-4080-a0d5-af3db7b987b7}</Project>
+      <Name>HIS.DSkinControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Service.Core\HIS.Service.Core.csproj">
+      <Project>{bf6f3ed7-32b1-4100-b026-f26aefe657a0}</Project>
+      <Name>HIS.Service.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Utility\HIS.Utility.csproj">
+      <Project>{2c8a0d17-e431-4f4b-b1ca-64b18d75bf72}</Project>
+      <Name>HIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Empi\FormPatientManager.resx">
+      <DependentUpon>FormPatientManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceManager\FormInvoiceManager.resx">
+      <DependentUpon>FormInvoiceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scheduling\FormRegisteredFeeType.resx">
+      <DependentUpon>FormRegisteredFeeType.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

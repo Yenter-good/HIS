@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF6F3ED7-32B1-4100-B026-F26AEFE657A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HIS.Service.Core</RootNamespace>
+    <AssemblyName>HIS.Service.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Charge\IChargeInvoiceService.cs" />
+    <Compile Include="Charge\IRegFeeTypeService.cs" />
+    <Compile Include="Common\IAdviceService.cs" />
+    <Compile Include="Common\IAppService.cs" />
+    <Compile Include="Common\ICatalogService.cs" />
+    <Compile Include="Common\IDeptService.cs" />
+    <Compile Include="Common\IDiagnosisService.cs" />
+    <Compile Include="Common\IFeeItemService.cs" />
+    <Compile Include="Common\IFeeTypeService.cs" />
+    <Compile Include="Common\IIntervalService.cs" />
+    <Compile Include="Common\IInvoiceService.cs" />
+    <Compile Include="Common\ILogService.cs" />
+    <Compile Include="Common\IMenuService.cs" />
+    <Compile Include="Common\IMerchantsService.cs" />
+    <Compile Include="Common\IOrgService.cs" />
+    <Compile Include="Common\ISessionService.cs" />
+    <Compile Include="Common\ISysDicDetailService.cs" />
+    <Compile Include="Common\ISysDicService.cs" />
+    <Compile Include="Common\ISysDictQueryService.cs" />
+    <Compile Include="Common\IUserParameterService.cs" />
+    <Compile Include="Common\ISystemParameterService.cs" />
+    <Compile Include="Common\ITimeService.cs" />
+    <Compile Include="Common\IUsageService.cs" />
+    <Compile Include="Common\ITitleService.cs" />
+    <Compile Include="Drug\IDrugSplitOrMergeService.cs" />
+    <Compile Include="Drug\IChangeInventoryReceiptService.cs" />
+    <Compile Include="Drug\IDrugInventoryService.cs" />
+    <Compile Include="Drug\IDrugTransferService.cs" />
+    <Compile Include="Drug\IPharmacyInOutInventoryService.cs" />
+    <Compile Include="Drug\IPharmacyService.cs" />
+    <Compile Include="Drug\IPharmacyTakeStockService.cs" />
+    <Compile Include="Drug\IPriceChangedReceiptService.cs" />
+    <Compile Include="Drug\IProcurementPlanService.cs" />
+    <Compile Include="Drug\IWarehouseInInventoryService.cs" />
+    <Compile Include="Drug\IWarehouspitalTakeStockService.cs" />
+    <Compile Include="Drug\IWholehospitalClassService.cs" />
+    <Compile Include="Drug\IWholehospitalSpecificationService.cs" />
+    <Compile Include="Empi\IEmpiAddressService.cs" />
+    <Compile Include="Empi\IEmpiPatientService.cs" />
+    <Compile Include="Entities\AdviceCategoryEntity.cs" />
+    <Compile Include="Entities\AdviceEntity.cs" />
+    <Compile Include="Entities\AdviceFeeItemMapperEntity.cs" />
+    <Compile Include="Entities\CatalogEntity.cs" />
+    <Compile Include="Entities\Charge\ChargeInvoiceEntity.cs" />
+    <Compile Include="Entities\Charge\RegFeeType.cs" />
+    <Compile Include="Entities\Common\AppEntity.cs" />
+    <Compile Include="Entities\Common\DataResult.cs" />
+    <Compile Include="Common\IIdService.cs" />
+    <Compile Include="Common\IIniService.cs" />
+    <Compile Include="Entities\Common\ItemEntity.cs" />
+    <Compile Include="Entities\Common\KeyValue.cs" />
+    <Compile Include="Entities\Common\MachineInfo.cs" />
+    <Compile Include="Entities\Common\MenuEntity.cs" />
+    <Compile Include="Entities\Common\OrganizationInfo.cs" />
+    <Compile Include="Entities\Common\RunSysInfo.cs" />
+    <Compile Include="Entities\DeptDiagnosisEntity.cs" />
+    <Compile Include="Entities\DeptPharmacyEntity.cs" />
+    <Compile Include="Entities\DiagnosisEntity.cs" />
+    <Compile Include="Entities\Drug\ChangeInventoryReceiptDetailEntity.cs" />
+    <Compile Include="Entities\Drug\ChangeInventoryReceiptEntity.cs" />
+    <Compile Include="Entities\OP\DataElementEntity.cs" />
+    <Compile Include="Entities\OP\MedicalRecord.cs" />
+    <Compile Include="Entities\OP\PrescriptionDetail\PrescriptionAdviceEntity.cs" />
+    <Compile Include="Entities\OP\PrescriptionDrugEntity.cs" />
+    <Compile Include="Entities\Drug\PriceChangedDeptInfluenceEntity.cs" />
+    <Compile Include="Entities\Drug\PriceChangedReceiptDetailEntity.cs" />
+    <Compile Include="Entities\Drug\PriceChangedReceiptEntity.cs" />
+    <Compile Include="Entities\Drug\ProcurementPlanDetailEntity.cs" />
+    <Compile Include="Entities\Drug\ProcurementPlanEntity.cs" />
+    <Compile Include="Entities\Drug\TakeStockDetailEntity.cs" />
+    <Compile Include="Entities\Drug\TakeStockEntity.cs" />
+    <Compile Include="Entities\Drug\DrugTransferDetailEntity.cs" />
+    <Compile Include="Entities\Drug\DrugTransferReceipt.cs" />
+    <Compile Include="Entities\Empi\AdministrativeDivisionEntity.cs" />
+    <Compile Include="Entities\Empi\PatientEntity.cs" />
+    <Compile Include="Entities\IntervalEntity.cs" />
+    <Compile Include="Entities\OP\BigTemplateEntity.cs" />
+    <Compile Include="Entities\OP\DealWithItemEntity.cs" />
+    <Compile Include="Entities\OP\DiseasesEntity.cs" />
+    <Compile Include="Entities\OP\DiseasesMapperEntity.cs" />
+    <Compile Include="Entities\OP\OutpatientEntity.cs" />
+    <Compile Include="Entities\OP\PatientJournalEntity.cs" />
+    <Compile Include="Entities\OP\PrescriptionDetail\PrescriptionDetailEntity.cs" />
+    <Compile Include="Entities\OP\PrescriptionDetail\PrescriptionDrugDetailEntity.cs" />
+    <Compile Include="Entities\OP\PrescriptionEntity.cs" />
+    <Compile Include="Entities\OP\PrescriptionGroupDetailEntity.cs" />
+    <Compile Include="Entities\OP\PrescriptionGroupEntity.cs" />
+    <Compile Include="Entities\OP\PrescriptionDetail\PrescriptionItemDetailEntity.cs" />
+    <Compile Include="Entities\OP\PrescriptionTypeEntity.cs" />
+    <Compile Include="Entities\OP\SubTemplateSampleEntity.cs" />
+    <Compile Include="Entities\OP\TemplateSampleEntity.cs" />
+    <Compile Include="Entities\SerialNumberEntity.cs" />
+    <Compile Include="Entities\DeptEntity.cs" />
+    <Compile Include="Entities\Drug\DrugInventoryEntity.cs" />
+    <Compile Include="Entities\Drug\DrugEntity.cs" />
+    <Compile Include="Entities\Drug\PharmacyInOutInventoryDetailEntity.cs" />
+    <Compile Include="Entities\Drug\PharmacyInOutInventoryEntity.cs" />
+    <Compile Include="Entities\Drug\WarehouseInOutInventoryDetailEntitiy.cs" />
+    <Compile Include="Entities\Drug\WarehouseInOutInventoryEntitiy.cs" />
+    <Compile Include="Entities\Drug\WholehospitalClassEntity.cs" />
+    <Compile Include="Entities\Drug\WholehospitalSpecificationEntity.cs" />
+    <Compile Include="Entities\FeeItemEntity.cs" />
+    <Compile Include="Entities\FeeTypeEntity.cs" />
+    <Compile Include="Entities\MerchantsEntity.cs" />
+    <Compile Include="Entities\PositionEntity.cs" />
+    <Compile Include="Entities\RoleAdditionalEntity.cs" />
+    <Compile Include="Entities\RoleEntity.cs" />
+    <Compile Include="Entities\SysDicDetailEntity.cs" />
+    <Compile Include="Entities\SysDicEntity.cs" />
+    <Compile Include="Entities\UserParameterEntity.cs" />
+    <Compile Include="Entities\UsageEntity.cs" />
+    <Compile Include="Enums\Dept.cs" />
+    <Compile Include="Enums\Diagnosis.cs" />
+    <Compile Include="Enums\Drug.cs" />
+    <Compile Include="Enums\Interval.cs" />
+    <Compile Include="Enums\InvoiceType.cs" />
+    <Compile Include="Enums\ItemType.cs" />
+    <Compile Include="Enums\Template.cs" />
+    <Compile Include="Enums\Outpatient.cs" />
+    <Compile Include="Enums\Pharmacy.cs" />
+    <Compile Include="Enums\Prescription.cs" />
+    <Compile Include="Enums\SerialNumber.cs" />
+    <Compile Include="Enums\SexType.cs" />
+    <Compile Include="Enums\SysDicStyle.cs" />
+    <Compile Include="Entities\SysParameterEntity.cs" />
+    <Compile Include="Entities\TitleEntity.cs" />
+    <Compile Include="Entities\TypeUri.cs" />
+    <Compile Include="Entities\UserEntity.cs" />
+    <Compile Include="Enums\AdviceType.cs" />
+    <Compile Include="Enums\DataOperation.cs" />
+    <Compile Include="Enums\DataStatus.cs" />
+    <Compile Include="Enums\DisableDeptType.cs" />
+    <Compile Include="Enums\MenuStyle.cs" />
+    <Compile Include="Enums\ThreeDirectoryType.cs" />
+    <Compile Include="Enums\UsageType.cs" />
+    <Compile Include="Enums\UserNature.cs" />
+    <Compile Include="Enums\UserType.cs" />
+    <Compile Include="IoC\IService.cs" />
+    <Compile Include="IoC\IServiceSingleton.cs" />
+    <Compile Include="Entities\OP\PatientDiagnosisEntity.cs" />
+    <Compile Include="OP\IOPBigTemplateService.cs" />
+    <Compile Include="OP\IOPChronicDiseases.cs" />
+    <Compile Include="OP\IOPDataElementService.cs" />
+    <Compile Include="OP\IOPGroupService.cs" />
+    <Compile Include="OP\IOPJournalService.cs" />
+    <Compile Include="OP\IOPMedicalRecordService.cs" />
+    <Compile Include="OP\IOPPatientDiagnosisService.cs" />
+    <Compile Include="OP\IOPPatientService.cs" />
+    <Compile Include="OP\IOPPrescriptionService.cs" />
+    <Compile Include="OP\IOPSubTemplateSampleService.cs" />
+    <Compile Include="OP\IOPTemplateSampleService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IoC\ServiceIdAttribute.cs" />
+    <Compile Include="Common\IRoleService.cs" />
+    <Compile Include="Common\IUserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Param\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HIS.Utility\HIS.Utility.csproj">
+      <Project>{2c8a0d17-e431-4f4b-b1ca-64b18d75bf72}</Project>
+      <Name>HIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

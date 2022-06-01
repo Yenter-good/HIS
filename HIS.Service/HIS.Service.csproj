@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{865E2C0F-AF96-4625-BE52-CD50B278770A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HIS.Service</RootNamespace>
+    <AssemblyName>HIS.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug-32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DCSoft.Writer">
+      <HintPath>..\packages\DCSoft.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="Dos.ORM, Version=1.16.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dos.ORM.1.17.0\lib\net40\Dos.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditionHelper.cs" />
+    <Compile Include="Charge\ChargeInvoiceService.cs" />
+    <Compile Include="Charge\RegFeeTypeService.cs" />
+    <Compile Include="Common\AdviceService.cs" />
+    <Compile Include="Common\AppService.cs" />
+    <Compile Include="Common\CatalogService.cs" />
+    <Compile Include="Common\DeptService.cs" />
+    <Compile Include="Common\DiagnosisService.cs" />
+    <Compile Include="Common\FeeItemService.cs" />
+    <Compile Include="Common\FeeTypeService.cs" />
+    <Compile Include="Common\IntervalService.cs" />
+    <Compile Include="Common\UserParameterService.cs" />
+    <Compile Include="Drug\ChangeInventoryReceiptService.cs" />
+    <Compile Include="Drug\DrugSplitOrMergeService.cs" />
+    <Compile Include="Drug\DrugTransferService.cs" />
+    <Compile Include="Drug\PharmacyTakeStockService.cs" />
+    <Compile Include="Empi\EmpiAddressService.cs" />
+    <Compile Include="Empi\EmpiPatientService.cs" />
+    <Compile Include="Internal\InternalChangeInventoryService.cs" />
+    <Compile Include="Internal\InternalInvoiceService.cs" />
+    <Compile Include="Common\InvoiceService.cs" />
+    <Compile Include="Common\LogService.cs" />
+    <Compile Include="Common\MenuService.cs" />
+    <Compile Include="Common\IdService.cs" />
+    <Compile Include="Common\IniService.cs" />
+    <Compile Include="Common\MerchantsService.cs" />
+    <Compile Include="Common\OrgService.cs" />
+    <Compile Include="Common\SessionService.cs" />
+    <Compile Include="Common\SysDicService.cs" />
+    <Compile Include="Common\SysDicDetailService.cs" />
+    <Compile Include="Common\SysDictQueryService.cs" />
+    <Compile Include="Common\SystemParameterService.cs" />
+    <Compile Include="Common\TimeService.cs" />
+    <Compile Include="Common\UsageService.cs" />
+    <Compile Include="Common\TitleService.cs" />
+    <Compile Include="Drug\PharmacyInOutInventoryService.cs" />
+    <Compile Include="Drug\DrugInventoryService.cs" />
+    <Compile Include="Drug\PriceChangedReceiptService.cs" />
+    <Compile Include="Drug\ProcurementPlanService.cs" />
+    <Compile Include="Drug\WarehouseInOutInventoryService.cs" />
+    <Compile Include="Drug\WarehouspitalTackStockService.cs" />
+    <Compile Include="Drug\WholehospitalClassService.cs" />
+    <Compile Include="Drug\WholehospitalSpecificationService.cs" />
+    <Compile Include="Internal\InternalPharmacyInOutInventoryService.cs" />
+    <Compile Include="Mappers\ChargePorfile.cs" />
+    <Compile Include="Mappers\DicProfile.cs" />
+    <Compile Include="Mappers\DrugProfile.cs" />
+    <Compile Include="Mappers\EmpiProfile.cs" />
+    <Compile Include="Mappers\OPMapper.cs" />
+    <Compile Include="Mappers\SysProfile.cs" />
+    <Compile Include="ModuleInitailizer\ModuleInitailizer.cs" />
+    <Compile Include="OP\OPBigTemplateService.cs" />
+    <Compile Include="OP\OPChronicDiseases.cs" />
+    <Compile Include="OP\OPDataElementService.cs" />
+    <Compile Include="OP\OPGroupService.cs" />
+    <Compile Include="OP\OPJournalService.cs" />
+    <Compile Include="OP\OPMedicalRecordService.cs" />
+    <Compile Include="OP\OPPatientDiagnosisService.cs" />
+    <Compile Include="OP\OPPatientService.cs" />
+    <Compile Include="OP\OPPrescriptionService.cs" />
+    <Compile Include="OP\OPSubTemplateSampleService.cs" />
+    <Compile Include="OP\OPTemplateSampleService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\RoleService.cs" />
+    <Compile Include="Common\UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HIS.Core\HIS.Core.csproj">
+      <Project>{c998f840-a29e-421c-b3bc-2d8da28dc226}</Project>
+      <Name>HIS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Model\HIS.Model.csproj">
+      <Project>{8505c554-969c-4909-a792-5cb40330fd5c}</Project>
+      <Name>HIS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Service.Core\HIS.Service.Core.csproj">
+      <Project>{bf6f3ed7-32b1-4100-b026-f26aefe657a0}</Project>
+      <Name>HIS.Service.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HIS.Utility\HIS.Utility.csproj">
+      <Project>{2c8a0d17-e431-4f4b-b1ca-64b18d75bf72}</Project>
+      <Name>HIS.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

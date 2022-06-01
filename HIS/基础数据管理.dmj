@@ -1,0 +1,3380 @@
+{
+  "RootName": "DataModels",
+  "CTVER": "43543234",
+  "TableCount": 23,
+  "Count": 1,
+  "items": [{
+    "ID": 1,
+    "Name": "基础数据管理",
+    "CreateDate": "2021-01-04 10:18:43",
+    "OrderNo": 1,
+    "DefDbEngine": "SQLSERVER",
+    "DbConnectStr": "TCtMetaSqlsvrDb",
+    "ConfigStr": "DrawerWidth=2450\r\nDrawerHeight=1058\r\nWorkAreaColor=16777215\r\nSelectedColor=-2147483635\r\nDefaultObjectColor=15921906\r\nDefaultTitleColor=255\r\nDefaultPKColor=16711935\r\nDefaultFKColor=16711680\r\nDefaultBorderColor=12632256\r\nDefaultLineColor=16711680\r\nShowFieldType=1\r\nShowFieldIcon=1\r\nShowPhyFieldName=2\r\nDatabaseEngine=\r\nGenFKIndexesSQL=0\r\n",
+    "Tables": {
+      "Count": 23,
+      "items": [
+        {
+          "Name": "Sys_Role",
+          "Caption": "角色表",
+          "OrderNo": 1,
+          "GraphDesc": "Left=10.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 14,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 1,
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 2,
+                "DisplayName": "组织机构编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "Code",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 3,
+                "DisplayName": "角色编码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 4,
+                "Name": "Name",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 4,
+                "DisplayName": "角色名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 5,
+                "Name": "RoleLevel",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 5,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Role_RoleLevel",
+                "DisplayName": "角色等级",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 6,
+                "Name": "Description",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 6,
+                "DisplayName": "描述",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 7,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 7,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 8,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 8,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Role_CreationTime",
+                "DisplayName": "创建日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 9,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 9,
+                "DisplayName": "删除操作人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 10,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 10,
+                "DisplayName": "删除操作日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 11,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 11,
+                "DisplayName": "最后一次操作人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 12,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 12,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Role_LastModificationTime",
+                "DisplayName": "最后一次操作日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 13,
+                "Name": "DataStatus",
+                "Memo": "状态 0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 13,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Table_1_Staus",
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 14,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:07",
+                "OrderNo": 14,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Role_No",
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_Dept",
+          "Caption": "科室表",
+          "OrderNo": 2,
+          "GraphDesc": "Left=360.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 19,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DisplayName": "ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dept_HosId",
+                "DisplayName": "医疗机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 3,
+                "Name": "ParentId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "父节点ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 4,
+                "Name": "Code",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 5,
+                "Name": "Name",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "DisplayName": "名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 17,
+                "Name": "AliasName",
+                "Memo": "别名",
+                "CreateDate": "2021-01-04 10:34:48",
+                "OrderNo": 6,
+                "DisplayName": "别名",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 6,
+                "Name": "SearchCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 7,
+                "DisplayName": "检索码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 7,
+                "Name": "CategoryId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 8,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dept_CategoryId",
+                "DisplayName": "科室大类ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 8,
+                "Name": "DefaultDept",
+                "Memo": "默认科室",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 9,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dept_DefaultDept",
+                "DisplayName": "默认科室",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 9,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 10,
+                "DisplayName": "创建者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 10,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 11,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dept_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 11,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 12,
+                "DisplayName": "删除者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 13,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 13,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 14,
+                "DisplayName": "最后的修改者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 14,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 15,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dept_LastModificationTime",
+                "DisplayName": "最后的修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 15,
+                "Name": "DataStatus",
+                "Memo": "状态 0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 16,
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 16,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 17,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dept_No",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 18,
+                "Name": "IsEmergency",
+                "Memo": "是否急诊",
+                "CreateDate": "2021-01-04 10:37:17",
+                "OrderNo": 18,
+                "DisplayName": "是否急诊",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "false",
+                "Nullable": true
+              },
+              {
+                "ID": 19,
+                "Name": "Location",
+                "Memo": "科室位置",
+                "CreateDate": "2021-01-04 10:40:43",
+                "OrderNo": 19,
+                "DisplayName": "科室位置",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "Nullable": true,
+                "DataLength": 50
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_RoleAuthority",
+          "Caption": "角色权限",
+          "OrderNo": 3,
+          "GraphDesc": "Left=675.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 5,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "RoleId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "角色ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "AuthorityCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "权限码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 200
+              },
+              {
+                "ID": 4,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "机构编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_RoleAuthority_No",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_Org",
+          "Caption": "组织机构表",
+          "Memo": "组织机构表",
+          "OrderNo": 4,
+          "GraphDesc": "Left=920.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 15,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DisplayName": "ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "Code",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "机构代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 3,
+                "Name": "OrganizationCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "组织机构代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 4,
+                "Name": "Name",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "机构名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 5,
+                "Name": "ParentId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Org_ParentId",
+                "DisplayName": "父节点ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 6,
+                "Name": "Description",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 6,
+                "DisplayName": "描述",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 100
+              },
+              {
+                "ID": 7,
+                "Name": "SearchCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 7,
+                "DisplayName": "检索码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 10
+              },
+              {
+                "ID": 8,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 8,
+                "DisplayName": "创建者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 9,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 9,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Org_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 10,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 10,
+                "DisplayName": "删除者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 11,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 11,
+                "DisplayName": "删除者信息",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 12,
+                "DisplayName": "修改者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 13,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 13,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Org_LastModificationTime",
+                "DisplayName": "修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 14,
+                "Name": "DataStatus",
+                "Memo": "0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 14,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Table_1_Staus_1",
+                "DisplayName": "0停用",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 15,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 15,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Org_No",
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_RoleAdditionalInfo",
+          "Caption": "角色附加信息",
+          "Memo": "角色附加信息",
+          "OrderNo": 5,
+          "GraphDesc": "Left=1235.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 16,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 2,
+                "Name": "RoleId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "角色id",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "UserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "用户id",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 4,
+                "Name": "TitleId",
+                "Memo": "职称 0无 1住院医师 2主治医师 3副主任医师 4主任医师 5护士 6护师 7主管护师 8副主任护师 9主任护师",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "职称",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 5,
+                "Name": "DefaultDeptId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "DisplayName": "用户在角色下的默认科室",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "TeacherId",
+                "Memo": "带教老师id\r\n当用户性质为试用，进修，实习时必填",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 6,
+                "DisplayName": "带教老师id",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "AllowStartTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 7,
+                "DisplayName": "允许登陆的时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "AllowEndTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 8,
+                "DisplayName": "允许登陆截止的时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 9,
+                "DisplayName": "创建者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 10,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 10,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_RoleAdditionalInfo_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 11,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 11,
+                "DisplayName": "删除者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 12,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 13,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 13,
+                "DisplayName": "最后一次修改人ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 14,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 14,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_RoleAdditionalInfo_LastModificationTime",
+                "DisplayName": "最后的修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 15,
+                "Name": "DataStatus",
+                "Memo": "状态 0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 15,
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 16,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 16,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_RoleAdditionalInfo_No",
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_User",
+          "Caption": "用户表",
+          "Memo": "用户表",
+          "OrderNo": 6,
+          "GraphDesc": "Left=1620.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 22,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DisplayName": "用户ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "医疗机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "Code",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "用户账户",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 4,
+                "Name": "Password",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "用户密码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 5,
+                "Name": "Name",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "DisplayName": "用户真实姓名",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 6,
+                "Name": "UserType",
+                "Memo": "用户类型 1 医生  2护士 0 其他 \r\n",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 6,
+                "DisplayName": "用户类型",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 7,
+                "Name": "UserNature",
+                "Memo": "用户性质 0 普通 1 试用 2 实习 3 进修 \r\n注意：其中试用生成的工号约定前缀为SY 实习为SX 进修为JX",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 7,
+                "DisplayName": "用户性质",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 8,
+                "Name": "EducationId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 8,
+                "DisplayName": "用户学历",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 22,
+                "Name": "TitleId",
+                "CreateDate": "2021-01-04 10:49:42",
+                "OrderNo": 9,
+                "DisplayName": "职称",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "RoleId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 10,
+                "DisplayName": "默认角色id",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 10,
+                "Name": "IDCard",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 11,
+                "DisplayName": "身份证",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 11,
+                "Name": "Birthday",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 12,
+                "DisplayName": "出生日期",
+                "DataType": 4,
+                "DataTypeName": "date",
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "PhoneNumber",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 13,
+                "DisplayName": "手机号",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 13,
+                "Name": "SearchCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 14,
+                "DisplayName": "检索码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 14,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 15,
+                "DisplayName": "创建者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 15,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 16,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_User_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 16,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 17,
+                "DisplayName": "删除者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 17,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 18,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 18,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 19,
+                "DisplayName": "最后一次修改人ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 19,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 20,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_User_LastModificationTime",
+                "DisplayName": "最后的修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 20,
+                "Name": "DataStatus",
+                "Memo": "状态 0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 21,
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 21,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 22,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_User_No",
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_Dic",
+          "Caption": "数据字典表",
+          "Memo": "数据字典表",
+          "OrderNo": 7,
+          "GraphDesc": "Left=1935.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 15,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "医疗机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "CatalogId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dic_CatalogId",
+                "DisplayName": "目录ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 4,
+                "Name": "Code",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 5,
+                "Name": "Name",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "DisplayName": "名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 6,
+                "Name": "Description",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 6,
+                "DisplayName": "描述",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 7,
+                "Name": "SearchCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 7,
+                "DisplayName": "检索码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 8,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 8,
+                "DisplayName": "当前用户ID",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 9,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 9,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dic_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 10,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 10,
+                "DisplayName": "删除用户ID",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 11,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 11,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 12,
+                "DisplayName": "最后修改用户ID",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 13,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 13,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dic_LastModificationTime",
+                "DisplayName": "最后修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 14,
+                "Name": "DataStatus",
+                "Memo": "状态 0 停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 14,
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 15,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 15,
+                "DataType": 2,
+                "DataTypeName": "int"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_Dic_Details",
+          "Caption": "数据字典明细",
+          "Memo": "数据字典明细",
+          "OrderNo": 8,
+          "GraphDesc": "Left=10.00\r\nTop=310.00",
+          "MetaFields": {
+            "Count": 19,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DisplayName": "ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "医疗机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "DicCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "所属数据字典代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 4,
+                "Name": "Code",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 5,
+                "Name": "Value",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "DisplayName": "值",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 200
+              },
+              {
+                "ID": 6,
+                "Name": "SourceId",
+                "Memo": "源头Id 无源头的默认为等于ID",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 6,
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 7,
+                "Name": "Extensibility",
+                "Memo": "是否可扩展  0 否 1 是",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 7,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dic_Details_Extensibility",
+                "DisplayName": "是否可扩展",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 8,
+                "Name": "IsBuiltIn",
+                "Memo": "是否系统内置编码  0 否 1 是",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 8,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dic_Details_IsBuiltIn",
+                "DisplayName": "是否系统内置编码",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 9,
+                "Name": "Visible",
+                "Memo": "是否允许当做下拉项目时是否可见  1是 0 否",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 9,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dic_Details_Visible",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 10,
+                "Name": "Description",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 10,
+                "DisplayName": "描述",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 11,
+                "Name": "SearchCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 11,
+                "DisplayName": "检索码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 12,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 12,
+                "DisplayName": "创建者ID",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 13,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 13,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dic_Details_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 14,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 14,
+                "DisplayName": "删除者ID",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 15,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 15,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 16,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 16,
+                "DisplayName": "最后修改者ID",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 17,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 17,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Dic_Details_LastModificationTime",
+                "DisplayName": "最后修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 18,
+                "Name": "DataStatus",
+                "Memo": "状态 0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 18,
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 19,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 19,
+                "DisplayName": "排序",
+                "DataType": 2,
+                "DataTypeName": "int"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_UserRole",
+          "Caption": "用户角色关系表",
+          "Memo": "用户角色关系表",
+          "OrderNo": 9,
+          "GraphDesc": "Left=675.00\r\nTop=310.00",
+          "MetaFields": {
+            "Count": 4,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "UserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "用户ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 4,
+                "Name": "RoleId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "兼职科室下角色ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_AppDept",
+          "Caption": "系统对应可操作科室",
+          "Memo": "系统对应可操作科室",
+          "OrderNo": 10,
+          "GraphDesc": "Left=990.00\r\nTop=310.00",
+          "MetaFields": {
+            "Count": 5,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "AppId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "系统ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "DeptId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "科室ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 4,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_Parameter",
+          "Caption": "系统参数表",
+          "Memo": "系统参数表",
+          "OrderNo": 11,
+          "GraphDesc": "Left=1935.00\r\nTop=310.00",
+          "MetaFields": {
+            "Count": 15,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 1,
+                "DisplayName": "ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "ParameterCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 2,
+                "DisplayName": "参数代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 3,
+                "Name": "ParameterName",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 3,
+                "DisplayName": "参数名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 4,
+                "Name": "ParameterValue",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 4,
+                "DisplayName": "参数值",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "Nullable": true,
+                "DataLength": 500
+              },
+              {
+                "ID": 5,
+                "Name": "Description",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 5,
+                "DisplayName": "描述",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 6,
+                "Name": "SearchCode",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 6,
+                "DisplayName": "检索码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 7,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 7,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Parameter_HosId",
+                "DisplayName": "医疗机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 8,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 8,
+                "DisplayName": "创建者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 9,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 9,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Parameter_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 10,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 10,
+                "DisplayName": "删除者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 11,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 11,
+                "DisplayName": "删除者信息",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 12,
+                "DisplayName": "修改者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 13,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 13,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Parameter_LastModificationTime",
+                "DisplayName": "修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 14,
+                "Name": "DataStatus",
+                "Memo": "0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 14,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Table_1_Staus_2",
+                "DisplayName": "0停用",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 15,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:08",
+                "OrderNo": 15,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Parameter_No",
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_App",
+          "Caption": "注册的系统",
+          "Memo": "注册的系统",
+          "OrderNo": 12,
+          "GraphDesc": "Left=325.00\r\nTop=410.00",
+          "MetaFields": {
+            "Count": 12,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 1,
+                "DisplayName": "编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "Name",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 2,
+                "DisplayName": "系统名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 3,
+                "Name": "HomePage",
+                "Memo": "主页,起始页    DLL|类名",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 3,
+                "DisplayName": "主页,起始页",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 1000
+              },
+              {
+                "ID": 4,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 4,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_App_No",
+                "DisplayName": "排序",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 5,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 5,
+                "DisplayName": "组织机构编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 6,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 6,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 7,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 7,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_App_CreationTime",
+                "DisplayName": "创建日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 8,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 8,
+                "DisplayName": "删除操作人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 9,
+                "DisplayName": "删除操作日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 10,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 10,
+                "DisplayName": "最后一次操作人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 11,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 11,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_App_LastModificationTime",
+                "DisplayName": "最后一次操作日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 12,
+                "Name": "DataStatus",
+                "Memo": "状态 0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 12,
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_UserDept",
+          "Caption": "人员科室关系表",
+          "Memo": "人员科室关系表",
+          "OrderNo": 13,
+          "GraphDesc": "Left=871.40\r\nTop=491.60",
+          "MetaFields": {
+            "Count": 5,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 1,
+                "DisplayName": "id",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 2,
+                "DisplayName": "医疗机构id",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "UserId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 3,
+                "DisplayName": "用户id",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 4,
+                "Name": "DeptId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 4,
+                "DisplayName": "用户所拥有科室id",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "RoleId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 5,
+                "DisplayName": "角色Id",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_Menu",
+          "Caption": "菜单表",
+          "Memo": "菜单表",
+          "OrderNo": 14,
+          "GraphDesc": "Left=1480.00\r\nTop=410.00",
+          "MetaFields": {
+            "Count": 18,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 1,
+                "DisplayName": "系统编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "Code",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 2,
+                "DisplayName": "菜单代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 3,
+                "Name": "ParentId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 3,
+                "DisplayName": "父节点ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 4,
+                "Name": "Text",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 4,
+                "DisplayName": "菜单名称",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 5,
+                "Name": "AssemblyName",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 5,
+                "DisplayName": "命名空间",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 6,
+                "Name": "FormName",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 6,
+                "DisplayName": "窗体文件名全称",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 7,
+                "Name": "OpenStyle",
+                "Memo": "0、选项卡 1、对话框 2、普通窗口 3、方法（用于接口调用）",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 7,
+                "DisplayName": "打开方式",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 8,
+                "Name": "AppId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 8,
+                "DisplayName": "系统编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 9,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 9,
+                "DisplayName": "组织机构编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 10,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 10,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 11,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 11,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Menu_CreationTime",
+                "DisplayName": "创建日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 12,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 12,
+                "DisplayName": "删除操作人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 13,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 13,
+                "DisplayName": "删除操作日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 14,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 14,
+                "DisplayName": "最后一次操作人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 15,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 15,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Menu_LastModificationTime",
+                "DisplayName": "最后一次操作日期",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 16,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 16,
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 17,
+                "Name": "DataStatus",
+                "Memo": "0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 17,
+                "DisplayName": "0停用",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 18,
+                "Name": "MethodName",
+                "Memo": "打开方式为3的情况下  必填 ",
+                "CreateDate": "2021-01-04 11:01:57",
+                "OrderNo": 18,
+                "DisplayName": "方法名称",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 100
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Sys_RoleMenu",
+          "Caption": "角色菜单关系表",
+          "Memo": "角色菜单关系表",
+          "OrderNo": 15,
+          "GraphDesc": "Left=2250.00\r\nTop=410.00",
+          "MetaFields": {
+            "Count": 5,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "RoleId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 2,
+                "DisplayName": "角色ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "MenuId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 3,
+                "DisplayName": "菜单ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 4,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 4,
+                "DisplayName": "机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:24:09",
+                "OrderNo": 5,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_RoleMenu_No",
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Dic_Advice",
+          "Caption": "医嘱项目",
+          "Memo": "医嘱项目",
+          "OrderNo": 16,
+          "GraphDesc": "Left=10.00\r\nTop=804.00",
+          "MetaFields": {
+            "Count": 21,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 1,
+                "DisplayName": "ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 2,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Combination_HosId",
+                "DisplayName": "医疗机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 3,
+                "Name": "DataStatus",
+                "Memo": "状态 0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 3,
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 4,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 4,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Combination_No",
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 5,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 5,
+                "DisplayName": "创建者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 6,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 6,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Combination_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 7,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 7,
+                "DisplayName": "最后的修改者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 8,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 8,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Combination_LastModificationTime",
+                "DisplayName": "最后的修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 10,
+                "Name": "Name",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 9,
+                "DisplayName": "医嘱名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 11,
+                "Name": "Price",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 10,
+                "DisplayName": "组合价格",
+                "DataType": 3,
+                "DataTypeName": "decimal",
+                "Nullable": true,
+                "DataLength": 8,
+                "DataScale": 4
+              },
+              {
+                "ID": 12,
+                "Name": "SearchCode",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 11,
+                "DisplayName": "拼音码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 13,
+                "Name": "WubiCode",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 12,
+                "DisplayName": "五笔码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 15,
+                "Name": "Type",
+                "Memo": "医嘱项目类型  1检验 2检查 3处置 4护理 5膳食 6嘱托 7手术 8其他",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 13,
+                "DisplayName": "组合项目类型",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "Nullable": true
+              },
+              {
+                "ID": 16,
+                "Name": "SampleId",
+                "Memo": "（检验类型时填写）标本类型",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 14,
+                "DisplayName": "标本类型",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 17,
+                "Name": "BuretId",
+                "Memo": "（检验类型时填写）试管类型",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 15,
+                "DisplayName": "试管类型",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 18,
+                "Name": "PartId",
+                "Memo": "（检查类型时填写）检查部位",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 16,
+                "DisplayName": "检查部位",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 19,
+                "Name": "ModalityId",
+                "Memo": "（检查类型时填写）设备类型",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 17,
+                "DisplayName": "设备类型",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 20,
+                "Name": "OFlag",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 18,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Combination_OFlag",
+                "DisplayName": "门诊可用标志",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 21,
+                "Name": "IFlag",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 19,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Combination_IFlag",
+                "DisplayName": "住院可用标志",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 22,
+                "Name": "SFlag",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 20,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Combination_SFlag",
+                "DisplayName": "手术室可用标志",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 23,
+                "Name": "MFlag",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 21,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_Sys_Combination_MFlag",
+                "DisplayName": "医技可用标志",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Dic_FeeItem",
+          "Caption": "物价项目",
+          "Memo": "物价项目",
+          "OrderNo": 17,
+          "GraphDesc": "Left=325.00\r\nTop=804.00",
+          "MetaFields": {
+            "Count": 25,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 1,
+                "DisplayName": "ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "HosId",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 2,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_BD_PriceItem_HosId",
+                "DisplayName": "医疗机构ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 3,
+                "Name": "Code",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 3,
+                "DisplayName": "代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "DataLength": 20
+              },
+              {
+                "ID": 4,
+                "Name": "Name",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 4,
+                "DisplayName": "名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "DataLength": 50
+              },
+              {
+                "ID": 6,
+                "Name": "No",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 5,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_BD_PriceItem_No",
+                "DisplayName": "序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "0"
+              },
+              {
+                "ID": 7,
+                "Name": "CreatorUserId",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 6,
+                "DisplayName": "创建者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 8,
+                "Name": "CreationTime",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 7,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_BD_PriceItem_CreationTime",
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 9,
+                "Name": "LastModifierUserId",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 8,
+                "DisplayName": "最后的修改者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 10,
+                "Name": "LastModificationTime",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 9,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_BD_PriceItem_LastModificationTime",
+                "DisplayName": "最后的修改时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "DefaultValue": "getdate()"
+              },
+              {
+                "ID": 11,
+                "Name": "DeleterUserId",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 10,
+                "DisplayName": "删除者ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "DeletionTime",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 11,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "datetime",
+                "Nullable": true
+              },
+              {
+                "ID": 13,
+                "Name": "DataStatus",
+                "Memo": "状态 0停用 1启用 2作废",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 12,
+                "DisplayName": "状态",
+                "DataType": 2,
+                "DataTypeName": "int"
+              },
+              {
+                "ID": 14,
+                "Name": "Specification",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 13,
+                "DisplayName": "规格",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 15,
+                "Name": "Measure",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 14,
+                "DisplayName": "最小计量",
+                "DataType": 3,
+                "DataTypeName": "float",
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 16,
+                "Name": "MeasureUnit",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 15,
+                "DisplayName": "计量单位",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 17,
+                "Name": "Price",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 16,
+                "DisplayName": "价格",
+                "DataType": 3,
+                "DataTypeName": "decimal",
+                "DataLength": 8,
+                "DataScale": 4
+              },
+              {
+                "ID": 18,
+                "Name": "ExecDeptId",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 17,
+                "DisplayName": "默认执行科室",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 19,
+                "Name": "FinanceTypeCode",
+                "Memo": "sys_Dic 中code 为  “FinanceType”",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 18,
+                "DisplayName": "财务分类",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true
+              },
+              {
+                "ID": 20,
+                "Name": "SearchCode",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 19,
+                "DisplayName": "拼音码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 21,
+                "Name": "WubiCode",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 20,
+                "DisplayName": "五笔码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 23,
+                "Name": "OFlag",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 21,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_BD_PriceItem_OFlag",
+                "DisplayName": "门诊可用标志",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 24,
+                "Name": "IFlag",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 22,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_BD_PriceItem_IFlag",
+                "DisplayName": "住院可用标志",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 25,
+                "Name": "SFlag",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 23,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_BD_PriceItem_SFlag",
+                "DisplayName": "手术室可用标志",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 26,
+                "Name": "MFlag",
+                "CreateDate": "2021-01-04 10:29:20",
+                "OrderNo": 24,
+                "Params": "SQLSERVER_DF_CONSTRAINT_NAME=DF_BD_PriceItem_MFlag",
+                "DisplayName": "医技可用标志",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "1"
+              },
+              {
+                "ID": 27,
+                "Name": "VariableFlag",
+                "CreateDate": "2021-01-04 11:25:52",
+                "OrderNo": 25,
+                "DisplayName": "价格是否可变",
+                "DataType": 5,
+                "DataTypeName": "bit",
+                "DefaultValue": "0"
+              }
+            ]
+          }
+        },
+        {
+          "ID": 19,
+          "Name": "Dic_AdviceFeeItemMapper",
+          "Caption": "医嘱于物价表对应关系",
+          "Memo": "医嘱于物价表对应关系",
+          "CreateDate": "2021-01-04 14:06:02",
+          "OrderNo": 18,
+          "GraphDesc": "Left=10.00\r\nTop=1326.00",
+          "MetaFields": {
+            "Count": 12,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "OrderNo": 1,
+                "DisplayName": "编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1,
+                "Nullable": true
+              },
+              {
+                "ID": 2,
+                "Name": "CreatorUserId",
+                "Memo": "当前用户ID",
+                "OrderNo": 2,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "CreationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 3,
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "LastModifierUserId",
+                "OrderNo": 4,
+                "DisplayName": "最后修改人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "LastModificationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 5,
+                "DisplayName": "最后修改时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "DeleterUserId",
+                "OrderNo": 6,
+                "DisplayName": "删除人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "DeletionTime",
+                "OrderNo": 7,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "DataStatus",
+                "Memo": "0失效 1启用",
+                "OrderNo": 8,
+                "DisplayName": "数据状态",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "No",
+                "OrderNo": 9,
+                "DisplayName": "排序号",
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 19,
+                "Name": "AdviceId",
+                "Memo": "医嘱ID",
+                "OrderNo": 10,
+                "DisplayName": "医嘱ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 20,
+                "Name": "FeeItemId",
+                "Memo": "物价表ID",
+                "OrderNo": 11,
+                "DisplayName": "物价表ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 21,
+                "Name": "Quantity",
+                "Memo": "物价表项目数量",
+                "OrderNo": 12,
+                "DisplayName": "数量",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "ID": 21,
+          "Name": "Dic_AdviceCategory",
+          "Caption": "医嘱分类",
+          "Memo": "医嘱分类",
+          "CreateDate": "2021-01-04 14:17:26",
+          "OrderNo": 19,
+          "GraphDesc": "Left=10.00\r\nTop=1640.00",
+          "MetaFields": {
+            "Count": 12,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "OrderNo": 1,
+                "DisplayName": "编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1,
+                "Nullable": true
+              },
+              {
+                "ID": 2,
+                "Name": "CreatorUserId",
+                "Memo": "当前用户ID",
+                "OrderNo": 2,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "CreationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 3,
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "LastModifierUserId",
+                "OrderNo": 4,
+                "DisplayName": "最后修改人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "LastModificationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 5,
+                "DisplayName": "最后修改时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "DeleterUserId",
+                "OrderNo": 6,
+                "DisplayName": "删除人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "DeletionTime",
+                "OrderNo": 7,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "DataStatus",
+                "Memo": "0失效 1启用",
+                "OrderNo": 8,
+                "DisplayName": "数据状态",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "No",
+                "OrderNo": 9,
+                "DisplayName": "排序号",
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 37,
+                "Name": "Name",
+                "OrderNo": 10,
+                "DisplayName": "名称",
+                "DataType": 1,
+                "DataTypeName": "nvarchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 38,
+                "Name": "ParentId",
+                "OrderNo": 11,
+                "DisplayName": "父节点ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 39,
+                "Name": "DeptId",
+                "OrderNo": 12,
+                "DisplayName": "科室ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "ID": 22,
+          "Name": "Dic_AdviceCategoryMapper",
+          "Caption": "医嘱与分类关系表",
+          "Memo": "医嘱与分类关系表",
+          "CreateDate": "2021-01-04 14:21:03",
+          "OrderNo": 20,
+          "GraphDesc": "Left=325.00\r\nTop=1640.00",
+          "MetaFields": {
+            "Count": 11,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "OrderNo": 1,
+                "DisplayName": "编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1,
+                "Nullable": true
+              },
+              {
+                "ID": 2,
+                "Name": "CreatorUserId",
+                "Memo": "当前用户ID",
+                "OrderNo": 2,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "CreationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 3,
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "LastModifierUserId",
+                "OrderNo": 4,
+                "DisplayName": "最后修改人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "LastModificationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 5,
+                "DisplayName": "最后修改时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "DeleterUserId",
+                "OrderNo": 6,
+                "DisplayName": "删除人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "DeletionTime",
+                "OrderNo": 7,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "DataStatus",
+                "Memo": "0失效 1启用",
+                "OrderNo": 8,
+                "DisplayName": "数据状态",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "No",
+                "OrderNo": 9,
+                "DisplayName": "排序号",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "Nullable": true
+              },
+              {
+                "ID": 49,
+                "Name": "AdviceId",
+                "OrderNo": 10,
+                "DisplayName": "医嘱ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 50,
+                "Name": "CategoryId",
+                "OrderNo": 11,
+                "DisplayName": "分类ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "ID": 23,
+          "Name": "Dic_FeeType",
+          "Caption": "费用类型表",
+          "Memo": "费用类型表",
+          "CreateDate": "2021-01-04 14:23:01",
+          "OrderNo": 21,
+          "GraphDesc": "Left=640.00\r\nTop=1640.00",
+          "MetaFields": {
+            "Count": 12,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "OrderNo": 1,
+                "DisplayName": "编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1,
+                "Nullable": true
+              },
+              {
+                "ID": 2,
+                "Name": "CreatorUserId",
+                "Memo": "当前用户ID",
+                "OrderNo": 2,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "CreationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 3,
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "LastModifierUserId",
+                "OrderNo": 4,
+                "DisplayName": "最后修改人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "LastModificationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 5,
+                "DisplayName": "最后修改时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "DeleterUserId",
+                "OrderNo": 6,
+                "DisplayName": "删除人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "DeletionTime",
+                "OrderNo": 7,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "DataStatus",
+                "Memo": "0失效 1启用",
+                "OrderNo": 8,
+                "DisplayName": "数据状态",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "No",
+                "OrderNo": 9,
+                "DisplayName": "排序号",
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 60,
+                "Name": "Code",
+                "OrderNo": 10,
+                "DisplayName": "费用代码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 61,
+                "Name": "Name",
+                "OrderNo": 11,
+                "DisplayName": "费用名称",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 13,
+                "Name": "SearchCode",
+                "Memo": "拼音码",
+                "CreateDate": "2021-01-06 16:46:46",
+                "OrderNo": 12,
+                "DisplayName": "拼音码",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 50
+              }
+            ]
+          }
+        },
+        {
+          "ID": 24,
+          "Name": "Dic_FeeCategory",
+          "Caption": "费用业务归类表",
+          "Memo": "费用业务归类表",
+          "CreateDate": "2021-01-04 14:26:47",
+          "OrderNo": 22,
+          "GraphDesc": "Left=955.00\r\nTop=1640.00",
+          "MetaFields": {
+            "Count": 12,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "OrderNo": 1,
+                "DisplayName": "ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1,
+                "Nullable": true
+              },
+              {
+                "ID": 71,
+                "Name": "Code",
+                "OrderNo": 2,
+                "DisplayName": "编号",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true
+              },
+              {
+                "ID": 73,
+                "Name": "ParentCode",
+                "OrderNo": 3,
+                "DisplayName": "父级归类编号",
+                "DataType": 1,
+                "DataTypeName": "varchar",
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 72,
+                "Name": "Name",
+                "OrderNo": 4,
+                "DisplayName": "费用归类名称",
+                "DataType": 1,
+                "DataTypeName": "varchar ",
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 2,
+                "Name": "CreatorUserId",
+                "Memo": "当前用户ID",
+                "OrderNo": 5,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "CreationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 6,
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "LastModifierUserId",
+                "OrderNo": 7,
+                "DisplayName": "最后修改人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "LastModificationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 8,
+                "DisplayName": "最后修改时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "DeleterUserId",
+                "OrderNo": 9,
+                "DisplayName": "删除人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "DeletionTime",
+                "OrderNo": 10,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "No",
+                "OrderNo": 11,
+                "DisplayName": "排序号",
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "DataStatus",
+                "Memo": "0失效 1启用",
+                "OrderNo": 12,
+                "DisplayName": "数据状态",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1",
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "ID": 25,
+          "Name": "Dic_FeeTypeMapper",
+          "Caption": "费用归类关系表",
+          "Memo": "费用归类关系表",
+          "CreateDate": "2021-01-04 14:34:40",
+          "OrderNo": 23,
+          "GraphDesc": "Left=1270.00\r\nTop=1640.00",
+          "MetaFields": {
+            "Count": 11,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "Id",
+                "OrderNo": 1,
+                "DisplayName": "编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "KeyFieldType": 1,
+                "Nullable": true
+              },
+              {
+                "ID": 83,
+                "Name": "FeeTypeId",
+                "OrderNo": 2,
+                "DisplayName": "费用类型ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 84,
+                "Name": "FeeCategoryId",
+                "OrderNo": 3,
+                "DisplayName": "归类ID",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 2,
+                "Name": "CreatorUserId",
+                "Memo": "当前用户ID",
+                "OrderNo": 4,
+                "DisplayName": "创建人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 3,
+                "Name": "CreationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 5,
+                "DisplayName": "创建时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "LastModifierUserId",
+                "OrderNo": 6,
+                "DisplayName": "最后修改人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint"
+              },
+              {
+                "ID": 5,
+                "Name": "LastModificationTime",
+                "Memo": "默认为当前时间",
+                "OrderNo": 7,
+                "DisplayName": "最后修改时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "DefaultValue": "sysdate",
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "DeleterUserId",
+                "OrderNo": 8,
+                "DisplayName": "删除人编号",
+                "DataType": 2,
+                "DataTypeName": "bigint",
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "DeletionTime",
+                "OrderNo": 9,
+                "DisplayName": "删除时间",
+                "DataType": 4,
+                "DataTypeName": "DateTime",
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "No",
+                "OrderNo": 10,
+                "DisplayName": "排序号",
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "DataStatus",
+                "Memo": "0失效 1启用",
+                "OrderNo": 11,
+                "DisplayName": "数据状态",
+                "DataType": 2,
+                "DataTypeName": "int",
+                "DefaultValue": "1",
+                "Nullable": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }]
+}
